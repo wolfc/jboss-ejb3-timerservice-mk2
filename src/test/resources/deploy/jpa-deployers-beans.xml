@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deployment xmlns="urn:jboss:bean-deployer:2.0">
+   <!-- Install the default CEMFBuilder, this will build a JPA 1 compliant
+        container entity manager factory. -->
+   <bean name="CEMFBuilder" class="org.jboss.jpa.builder.DefaultCEMFBuilder"/>
+   
    <bean name="DataSourceDependencyResolver" class="org.jboss.ejb3.timerservice.mk2.test.common.SimpleDataSourceDependencyResolver"/>
    
    <bean name="JavaEEModuleInformer" class="org.jboss.ejb3.timerservice.mk2.test.common.SimpleJavaEEModuleInformer"/>
